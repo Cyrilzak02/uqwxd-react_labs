@@ -13,7 +13,7 @@ const App = () => {
     const newTodo = {
       id: new Date().getTime(),
       text: todo.trim(),
-      completed: false,
+      done: false,
     };
     if (newTodo.text.length > 0 ) {
         setTodos([...todos].concat(newTodo));
@@ -34,7 +34,7 @@ const App = () => {
   function toggleComplete(id){
     let updatedTodos = [...todos].map((todo) => {
         if(todo.id === id){
-            todo.completed = !todo.completed;
+            todo.done = !todo.done;
         }
         return todo;
     });
@@ -115,3 +115,4 @@ return(
   </div>);
 };
 export default App;
+
